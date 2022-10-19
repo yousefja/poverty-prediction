@@ -22,7 +22,8 @@ Can the who, the where, and the what help us understand why certain households a
 Lastly, can we turn this into actionable insight? Is there something we can do to alleviate the poverty? To aid those in poverty? What are these poor households/neighborhoods experiencing that rich ones aren’t (and vice versa)? What is desireable and what is not? 
 
 ## Goals
-	Regression: predict HOW poor, either the monthly income, or a tiered approach of poverty levels (low, mid, high)
-	Classification: poor vs not poor
-	Impact analysis: Who needs the money most? Network analysis to guage impact in community?
-	Use a variety of models/architectures: random forest, xgboost, deep learning etc. 
+1. Build a poverty predictor:
+	a. Regression: predict HOW poor, either the monthly income, or a tiered approach of poverty levels (low, mid, high)
+	b. Classification: poor vs not poor
+2. Visualization: this will offer insight into the "who?" and the "where?" among other things
+3. Impact analysis: Who needs the money most? Network analysis to guage impact in community?
