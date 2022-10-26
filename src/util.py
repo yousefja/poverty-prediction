@@ -426,13 +426,19 @@ def preprocess(df, mixed_col_method='bool', outlier_method=OUTLIER_METHOD, manua
     
     # mixed columns
     df = clean_mixed_cols(df, method='bool')
-    
+
     # numeric columns
     df = clean_numeric(df, outlier_method=OUTLIER_METHOD, manual_outlier_cols=MANUAL_OUTLIER_COLS)
+    
+    # imputing removes dtypes - save these to restore afterwards 
+    dtypes = df.dtypes.to_dict()
     
     # impute missing values
     if impute:
         df = impute_df(df, method=IMPUTE_METHOD)
+        
+    # restore dtypes
+    df = df.astype(dtypes)
         
     # return non processed columns
     df = df.merge(df_non_processed, how='inner', on='og_ix')
